@@ -1,0 +1,47 @@
+{
+    "name": "ytj-snippets",
+    "displayName": "Snippets",
+    "description": "My personal vscode code snippets",
+    "version": "0.0.1",
+    "publisher": "YuTengjing",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "javascript",
+        "typescript",
+        "react",
+        "rust"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tjx666/adobe-extension-devtools"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.code-snippets"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/javascript.code-snippets"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.code-snippets"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/javascript.code-snippets"
+            },
+            {
+                "language": "rust",
+                "path": "./snippets/rust.code-snippets"
+            }
+        ]
+    }
+}

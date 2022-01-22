@@ -1,0 +1,8 @@
+{
+    "Print str with wrapper": {
+        "scope": "rust",
+        "prefix": "pln",
+        "body": "println!(\"$1\");$0",
+        "description": "Print str with wrapper"
+    }
+}

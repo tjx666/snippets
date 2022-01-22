@@ -1,0 +1,37 @@
+{
+    // module
+    "Require to Const": {
+        "prefix": "rqr",
+        "body": "const $2 = require('${1:package}');$0",
+        "description": "Require a package to const"
+    },
+    "Export Default Variable": {
+        "prefix": "edv",
+        "body": "export default ${1:${TM_FILENAME_BASE}};\n",
+        "description": "Export default variable in ES6 syntax"
+    },
+    "Export Default Function": {
+        "prefix": "edf",
+        "body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};\n",
+        "description": "Export default function in ES6 syntax"
+    },
+
+    "Immediately Invoked Function Expression": {
+        "scope": "javascript",
+        "prefix": "iife",
+        "body": [
+			"(function(){",
+			"    $2",
+			"})();"
+		],
+        "description": "Create immediately invoked function expression"
+    },
+    "Use Strict": {
+        "scope": "javascript",
+        "prefix": "ust",
+        "body": [
+			"'use strict';"
+		],
+        "description": "Use strict mode"
+    },
+}
