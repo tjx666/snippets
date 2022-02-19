@@ -2,7 +2,7 @@
     // module
     "Require to Const": {
         "prefix": "rqr",
-        "body": "const $2 = require('${1:package}');$0",
+        "body": "const ${2:module} = require('${1:package}');$0",
         "description": "Require a package to const"
     },
     "Export Default Variable": {
@@ -10,28 +10,58 @@
         "body": "export default ${1:${TM_FILENAME_BASE}};\n",
         "description": "Export default variable in ES6 syntax"
     },
+    "Export Part": {
+        "prefix": "ept",
+        "body": "export { $0 };\n",
+        "description": "Export part in ES6 syntax"
+    },
     "Export Default Function": {
         "prefix": "edf",
-        "body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};\n",
+        "body": "export default function ${1:${TM_FILENAME_BASE}}($2) {\n\t$0\n}\n",
         "description": "Export default function in ES6 syntax"
     },
-
     "Immediately Invoked Function Expression": {
-        "scope": "javascript",
         "prefix": "iife",
+        // prettier-ignore
         "body": [
-			"(function(){",
-			"    $2",
-			"})();"
-		],
+            "(function(){",
+            "\t$0",
+            "})();"
+        ],
         "description": "Create immediately invoked function expression"
     },
     "Use Strict": {
-        "scope": "javascript",
         "prefix": "ust",
-        "body": [
-			"'use strict';"
-		],
+        "body": ["'use strict';$0"],
         "description": "Use strict mode"
     },
+    "Type Doc Comment": {
+        "prefix": "@type",
+        "body": ["/** @type {$1} */$0"],
+        "description": "Type doc comment"
+    },
+    "ExtendScript Include Comment": {
+        "scope": "javascript",
+        "prefix": "@inc",
+        "body": ["// @include '$1'$0"],
+        "description": "ExtendScript include comment"
+    },
+    "Async Main Function": {
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "prefix": "main",
+        "body": "async function main() {\n\t$0\n}\n\nmain();",
+        "description": "Async main function"
+    },
+    "Ignore Prettier Comment": {
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "prefix": "igp",
+        "body": "// prettier-ignore$0",
+        "description": "Ignore prettier comment"
+    },
+    "Eslint Disable Comment": {
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "prefix": "esd",
+        "body": "/* eslint-disable$0 */",
+        "description": "Eslint disable comment"
+    }
 }

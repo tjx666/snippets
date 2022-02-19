@@ -4,5 +4,11 @@
         "prefix": "pln",
         "body": "println!(\"$1\");$0",
         "description": "Print str with wrapper"
+    },
+    "Println variable": {
+        "scope": "rust",
+        "prefix": "plv",
+        "body": "println!(\"{}\", $1);$0",
+        "description": "Println variable"
     }
 }

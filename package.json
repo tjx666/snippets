@@ -2,10 +2,10 @@
     "name": "ytj-snippets",
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "YuTengjing",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.64.0"
     },
     "categories": [
         "Snippets"
