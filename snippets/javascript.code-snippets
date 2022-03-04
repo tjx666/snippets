@@ -12,7 +12,7 @@
     },
     "import default": {
         "prefix": "imp",
-        "body": "import ${1:module} from '${1:module}';$0",
+        "body": "import ${2:module} from '${1:package}';$0",
         "description": "Import default from module"
     },
     "import ''": {
