@@ -5,6 +5,36 @@
         "body": "const ${2:module} = require('${1:package}');$0",
         "description": "Require a package to const"
     },
+    "module.exports": {
+        "prefix": "mde",
+        "body": "module.exports = $0;\n",
+        "description": "Module exports from Common JS"
+    },
+    "import default": {
+        "prefix": "imp",
+        "body": "import ${1:module} from '${1:module}';$0",
+        "description": "Import default from module"
+    },
+    "import ''": {
+        "prefix": "imn",
+        "body": "import '${1:module}';$0",
+        "description": "Import default from module without module name"
+    },
+    "import { }": {
+        "prefix": "imd",
+        "body": "import { $2 } from '${1:module}';$0",
+        "description": "Imports only a portion of the module"
+    },
+    "import *": {
+        "prefix": "ime",
+        "body": "import * as ${2:alias} from '${1:module}';$0",
+        "description": "Imports everything as alias from the module"
+    },
+    "import alias": {
+        "prefix": "ima",
+        "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+        "description": "Imports a specific portion of the module by assigning a local alias"
+    },
     "Export Default Variable": {
         "prefix": "edv",
         "body": "export default ${1:${TM_FILENAME_BASE}};\n",
@@ -20,21 +50,40 @@
         "body": "export default function ${1:${TM_FILENAME_BASE}}($2) {\n\t$0\n}\n",
         "description": "Export default function in ES6 syntax"
     },
+    "Export Class": {
+        "prefix": "ecl",
+        "body": "export default class ${1:className} {\n\t$0\n};\n",
+        "description": "Export default class in ES6 syntax"
+    },
+
+    // functions
+    "function": {
+        "prefix": "fn",
+        "body": "function ${1:name}($2) {\n\t$0\n}\n",
+        "description": "Define a function"
+    },
+    "async function": {
+        "prefix": "afn",
+        "body": "async function ${1:name}($2) {\n\t$0\n}\n",
+        "description": "Define an async function"
+    },
+    "Const Named Function": {
+        "prefix": "nfn",
+        "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+        "description": "Creates a named function in ES6 syntax"
+    },
     "Immediately Invoked Function Expression": {
         "prefix": "iife",
-        // prettier-ignore
-        "body": [
-            "(function(){",
-            "\t$0",
-            "})();"
-        ],
+        "body": "(function(){\n\t$0\n})();\n",
         "description": "Create immediately invoked function expression"
     },
-    "Use Strict": {
-        "prefix": "ust",
-        "body": ["'use strict';$0"],
-        "description": "Use strict mode"
+    "Async Main Function": {
+        "prefix": "main",
+        "body": "async function main() {\n\t$0\n}\n\nmain();",
+        "description": "Async main function"
     },
+
+    // comments
     "Type Doc Comment": {
         "prefix": "@type",
         "body": ["/** @type {$1} */$0"],
@@ -46,22 +95,67 @@
         "body": ["// @include '$1'$0"],
         "description": "ExtendScript include comment"
     },
-    "Async Main Function": {
-        "scope": "javascript,javascriptreact,typescript,typescriptreact",
-        "prefix": "main",
-        "body": "async function main() {\n\t$0\n}\n\nmain();",
-        "description": "Async main function"
-    },
     "Ignore Prettier Comment": {
-        "scope": "javascript,javascriptreact,typescript,typescriptreact",
-        "prefix": "igp",
+        "prefix": "prettier-ignore",
         "body": "// prettier-ignore$0",
         "description": "Ignore prettier comment"
     },
     "Eslint Disable Comment": {
-        "scope": "javascript,javascriptreact,typescript,typescriptreact",
-        "prefix": "esd",
+        "prefix": "eslint-disable",
         "body": "/* eslint-disable$0 */",
         "description": "Eslint disable comment"
-    }
+    },
+
+    "constructor": {
+        "prefix": "con",
+        "body": "constructor(${1:params}) {\n\t${0}\n}",
+        "description": "Add default constructor in a class in ES6 syntax"
+    },
+    "Destructing Object": {
+        "prefix": "dob",
+        "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+        "description": "Creates and assigns a local variable using object destructing"
+    },
+    "Destructing Array": {
+        "prefix": "dar",
+        "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+        "description": "Creates and assigns a local variable using array destructing"
+    },
+    "Use Strict": {
+        "prefix": "ust",
+        "body": ["'use strict';$0"],
+        "description": "Use strict mode"
+    },
+
+    // React
+    "Create react function component and default export": {
+        "scope": "typescriptreact",
+        "prefix": "rfce",
+        // prettier-ignore
+        "body": [
+          "interface ${1:ComponentName}Props {",
+          "\t$2",
+          "}",
+          "",
+          "export default function ${1:ComponentName}({ $3 }: ${1:ComponentName}Props) {",
+          "\treturn <div className=\"$4\">$0</div>",
+          "}\n"
+        ],
+        "description": "Create react function component and default export"
+    },
+    "Create react function component": {
+        "scope": "typescriptreact",
+        "prefix": "rfc",
+        // prettier-ignore
+        "body": [
+          "interface ${1:ComponentName}Props {",
+          "\t$2",
+          "}",
+          "",
+          "function ${1:ComponentName}({ $3 }: ${1:ComponentName}Props) {",
+          "\treturn <div className=\"$4\">$0</div>",
+          "}\n"
+        ],
+        "description": "Create react function component"
+    },
 }
