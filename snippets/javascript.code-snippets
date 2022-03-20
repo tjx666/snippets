@@ -74,7 +74,7 @@
     },
     "Immediately Invoked Function Expression": {
         "prefix": "iife",
-        "body": "(function(){\n\t$0\n})();\n",
+        "body": "(function () {\n\t$0\n})();\n",
         "description": "Create immediately invoked function expression"
     },
     "Async Main Function": {
@@ -158,4 +158,86 @@
         ],
         "description": "Create react function component"
     },
+
+    // log
+    "consoleAssert": {
+        "prefix": "cas",
+        "body": "console.assert(${1:expression}, '$0');",
+        "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+    },
+    "consoleClear": {
+        "prefix": "ccl",
+        "body": "console.clear();",
+        "description": "Clears the console"
+    },
+    "consoleCount": {
+        "prefix": "cco",
+        "body": "console.count(${1:label});",
+        "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+    },
+    "consoleDebug": {
+        "prefix": "cdb",
+        "body": "console.debug($0);",
+        "description": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari"
+    },
+    "consoleDir": {
+        "prefix": "cdi",
+        "body": "console.dir(${1:object});",
+        "description": "Prints a JavaScript representation of the specified object"
+    },
+    "consoleError": {
+        "prefix": "cer",
+        "body": "console.error(${1:error});",
+        "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+    },
+    "consoleGroup": {
+        "prefix": "cgr",
+        "body": "console.group('${1:label}');",
+        "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+    },
+    "consoleGroupEnd": {
+        "prefix": "cge",
+        "body": "console.groupEnd();",
+        "description": "Closes out the corresponding console.group()."
+    },
+    "consoleLog": {
+        "prefix": "clg",
+        "body": "console.log($0);",
+        "description": "Displays a message in the console"
+    },
+    "consoleLogProperty": {
+        "prefix": "clp",
+        "body": "console.log({ ${1:variable} });",
+        "description": "Console log a variable using object property shorthand syntax"
+    },
+    "consoleTrace": {
+        "prefix": "ctr",
+        "body": "console.trace('$0');",
+        "description": "Prints a stack trace from the point where the method was called"
+    },
+    "consoleWarn": {
+        "prefix": "cwa",
+        "body": "console.warn('$0');",
+        "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+    },
+    "consoleInfo": {
+        "prefix": "cin",
+        "body": "console.info('$0');",
+        "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+    },
+    "consoleTable": {
+        "prefix": "ctb",
+        "body": "console.table(${1:object});",
+        "description": "Displays tabular data as a table."
+    },
+    "consoleTime": {
+        "prefix": "cti",
+        "body": "console.time('${1:label}');",
+        "description": "Sets starting point for execution time measurement"
+    },
+    "consoleTimeEnd": {
+        "prefix": "cte",
+        "body": "console.timeEnd('${1:label}');",
+        "description": "Sets end point for execution time measurement"
+    }
 }
