@@ -2,7 +2,7 @@
     "name": "ytj-snippets",
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "YuTengjing",
     "engines": {
         "vscode": "^1.65.0"

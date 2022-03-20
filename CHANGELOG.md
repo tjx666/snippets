@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.5] - 2022-03-20
+
+### Added
+
+- add some log snippets of js
+
 ## [0.0.4] - 2022-03-05
 
 ### Changed
