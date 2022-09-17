@@ -89,12 +89,6 @@
         "body": ["/** @type {$1} */$0"],
         "description": "Type doc comment"
     },
-    "ExtendScript Include Comment": {
-        "scope": "javascript",
-        "prefix": "@inc",
-        "body": ["// @include '$1'$0"],
-        "description": "ExtendScript include comment"
-    },
     "Ignore Prettier Comment": {
         "prefix": "prettier-ignore",
         "body": "// prettier-ignore$0",
@@ -239,5 +233,14 @@
         "prefix": "cte",
         "body": "console.timeEnd('${1:label}');",
         "description": "Sets end point for execution time measurement"
+    },
+    "console time": {
+        "prefix": "time",
+        "body": [
+            "console.time('${1:label}');",
+            "$TM_SELECTED_TEXT",
+            "console.timeEnd('${1:label}');"
+        ],
+        "description": "console.time/console.timeEnd to test wrapped code cost"
     }
 }
