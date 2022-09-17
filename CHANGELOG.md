@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.0.6] - 2022-09-18
+
+### Added
+
+- console.time/console.timeEnd pair
+
+### Changed
+
+- remove @include, use extension `YuTengjing.adobe-extension-devtools` instead
+
 ## [0.0.5] - 2022-03-20
 
 ### Added
