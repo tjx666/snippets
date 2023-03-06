@@ -30,6 +30,11 @@
         "body": "import { $2 } from '${1:module}';$0",
         "description": "Imports only a portion of the module"
     },
+    "import type { }": {
+        "prefix": "imt",
+        "body": "import type { $2 } from '${1:module}';$0",
+        "description": "Imports type from the module"
+    },
     "import *": {
         "prefix": "ime",
         "body": "import * as ${2:alias} from '${1:module}';$0",
