@@ -15,6 +15,11 @@
         "body": "import ${2:module} from '${1:package}';$0",
         "description": "Import default from module"
     },
+    "import module from 'node:package'": {
+        "prefix": "imb",
+        "body": "import ${2:module} from 'node:${1:package}';$0",
+        "description": "Import default from node builtin module"
+    },
     "import ''": {
         "prefix": "imn",
         "body": "import '${1:module}';$0",
