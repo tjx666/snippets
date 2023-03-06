@@ -1,0 +1,47 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@yutengjing/prettier-config': ^0.0.1
+
+devDependencies:
+  '@yutengjing/prettier-config': 0.0.1
+
+packages:
+
+  /@prettier/plugin-xml/2.2.0:
+    resolution: {integrity: sha512-UWRmygBsyj4bVXvDiqSccwT1kmsorcwQwaIy30yVh8T+Gspx4OlC0shX1y+ZuwXZvgnafmpRYKks0bAu9urJew==}
+    dependencies:
+      '@xml-tools/parser': 1.0.11
+      prettier: 2.8.4
+    dev: true
+
+  /@xml-tools/parser/1.0.11:
+    resolution: {integrity: sha512-aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA==}
+    dependencies:
+      chevrotain: 7.1.1
+    dev: true
+
+  /@yutengjing/prettier-config/0.0.1:
+    resolution: {integrity: sha512-L0Zgc9/SsRt10pDY+tv8q3qiT6cmzbWa8wgNm3ftiTyKpTwP/HhJ22h9/A1/6W7PsqkmftqyHLoXYieOlFDprw==}
+    requiresBuild: true
+    peerDependencies:
+      prettier: ^2.7.1
+    dependencies:
+      '@prettier/plugin-xml': 2.2.0
+    dev: true
+
+  /chevrotain/7.1.1:
+    resolution: {integrity: sha512-wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==}
+    dependencies:
+      regexp-to-ast: 0.5.0
+    dev: true
+
+  /prettier/2.8.4:
+    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /regexp-to-ast/0.5.0:
+    resolution: {integrity: sha512-tlbJqcMHnPKI9zSrystikWKwHkBqu2a/Sgw01h3zFjvYrMxEDYHzzoMZnUrbIfpTFEsoRnnviOXNCzFiSc54Qw==}
+    dev: true

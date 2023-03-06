@@ -2,10 +2,11 @@
     "name": "ytj-snippets",
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
-    "version": "0.0.6",
+    "preview": true,
+    "version": "0.0.7",
     "publisher": "YuTengjing",
     "engines": {
-        "vscode": "^1.71.0"
+        "vscode": "^1.76.0"
     },
     "categories": [
         "Snippets"
@@ -19,6 +20,10 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/tjx666/adobe-extension-devtools"
+    },
+    "prettier": "@yutengjing/prettier-config",
+    "devDependencies": {
+        "@yutengjing/prettier-config": "^0.0.1"
     },
     "contributes": {
         "snippets": [
