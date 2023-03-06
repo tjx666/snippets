@@ -3,7 +3,7 @@
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
     "preview": true,
-    "version": "0.0.7",
+    "version": "0.0.8",
     "publisher": "YuTengjing",
     "engines": {
         "vscode": "^1.76.0"
@@ -14,7 +14,10 @@
     "keywords": [
         "javascript",
         "typescript",
+        "javascriptreact",
+        "typescriptreact",
         "react",
+        "vue",
         "rust"
     ],
     "repository": {

@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.8] - 2023-03-06
+
+### Added
+
+- new snippet `imt`: Imports type from the module
+
 ## [0.0.7] - 2023-03-06
 
 ### Added
