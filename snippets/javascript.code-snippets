@@ -28,22 +28,22 @@
     "import { }": {
         "prefix": "imd",
         "body": "import { $2 } from '${1:module}';$0",
-        "description": "Imports only a portion of the module"
+        "description": "Import only a portion of the module"
     },
     "import type { }": {
         "prefix": "imt",
         "body": "import type { $2 } from '${1:module}';$0",
-        "description": "Imports type from the module"
+        "description": "Import type from the module"
     },
     "import *": {
         "prefix": "ime",
         "body": "import * as ${2:alias} from '${1:module}';$0",
-        "description": "Imports everything as alias from the module"
+        "description": "Import everything as alias from the module"
     },
     "import alias": {
         "prefix": "ima",
         "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
-        "description": "Imports a specific portion of the module by assigning a local alias"
+        "description": "Import a specific portion of the module by assigning a local alias"
     },
     "Export Default Variable": {
         "prefix": "edv",
