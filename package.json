@@ -3,7 +3,7 @@
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
     "preview": true,
-    "version": "0.0.8",
+    "version": "0.0.9",
     "publisher": "YuTengjing",
     "engines": {
         "vscode": "^1.76.0"
@@ -22,7 +22,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/tjx666/adobe-extension-devtools"
+        "url": "git+git@github.com:tjx666/snippets.git"
     },
     "prettier": "@yutengjing/prettier-config",
     "devDependencies": {
