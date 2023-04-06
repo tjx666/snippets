@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.0] - 2023-04-07
+
+### Added
+
+- new js snippet `imj`: Import object from a json module
+
 ## [0.0.9] - 2023-03-27
 
 ### Fixed
