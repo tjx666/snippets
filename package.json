@@ -3,7 +3,7 @@
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
     "preview": true,
-    "version": "0.0.9",
+    "version": "0.1.0",
     "publisher": "YuTengjing",
     "engines": {
         "vscode": "^1.77.0"
