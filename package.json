@@ -3,7 +3,7 @@
     "displayName": "Snippets",
     "description": "My personal vscode code snippets",
     "preview": true,
-    "version": "0.1.0",
+    "version": "0.0.9",
     "publisher": "YuTengjing",
     "engines": {
         "vscode": "^1.77.0"
@@ -25,8 +25,16 @@
         "url": "git+git@github.com:tjx666/snippets.git"
     },
     "prettier": "@yutengjing/prettier-config",
+    "scripts": {
+        "release": "bumpp -c \"release: v%s\" package.json",
+        "publish:vs-marketplace": "vsce publish --no-dependencies",
+        "publish:open-vsx": "ovsx publish --no-dependencies"
+    },
     "devDependencies": {
-        "@yutengjing/prettier-config": "^0.0.1"
+        "@vscode/vsce": "^2.18.0",
+        "@yutengjing/prettier-config": "^0.0.1",
+        "bumpp": "^9.1.0",
+        "ovsx": "^0.8.0"
     },
     "contributes": {
         "snippets": [

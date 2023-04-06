@@ -1,6 +1,7 @@
-.vscode/**
-.vscode-test/**
+.vscode
+.vscode-test
 .gitignore
 test-workspace
 node_modules
 pnpm-lock.yaml
+.github
